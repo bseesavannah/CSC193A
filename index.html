@@ -4,20 +4,57 @@
     <meta charset="utf-8" />
     <title>My test page</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="Components/navbar.css">
+    <link rel="stylesheet" href="Components/footer.css">
   </head>
   <body>
-    <h1>Cats and Coffee</h1>
-    <div class="search">
-      <input type="text" placeholder="Search for">
-      <button type="submit">Search</button>
+    <div class="navbar">
+      <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li>
+          <a href="#gallery">Gallery</a>
+          <ul>
+            <li><a href="#">Link 1</a></li>
+            <li><a href="#">Link 2</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#reviews">Reviews</a>
+          <ul>
+            <li><a href="#">Link 1</a></li>
+            <li><a href="#">Link 2</a></li>
+            <li><a href="#">Link 3</a></li>
+          </ul>
+        </li>
+        <li><a href="#feedback">Feedback</a></li>
+      </ul>
+    </div>
+      <div class="header-container">
+        <div class="header-content">
+          <h1>Cats and Coffee</h1>
+          <div class="search">
+            <input type="text" placeholder="Search for">
+            <button type="submit">Search</button>
+          </div>
+        </div>
     </div>
     <p>I like <strong>cats</strong> and <strong>coffee</strong>. I think you could even say I have an <strong>addiction</strong> to both. If I could own more cats, I would, but I've been told that <strong>4 is enough.</strong></p>
     <p>There is a <a href=https://minicattown.org/ title=Mini Cat Town>cat cafe</a> where my brother goes to university that I want to visit.</p>
     <p>
       <div class="img-container">
-        <img src="https://assets.simon.com/tenantlogos/33859.png" alt="Mini Cat Town Logo"/>
+        <img src="Assign2/Imgs/33859.png" alt="Mini Cat Town Logo"/>
       </div>
     </p>
     <p>Just look at how cute their logo is!</p>
+    <footer class="footer">
+      <div class="footer-content">
+        <p>&copy; 2024. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

@@ -1,0 +1,68 @@
+/* Style for navbar */
+
+.navbar {
+    background-color: #ac99b0;
+    border-radius: 6px;
+    padding: 1px;
+    margin-top: 0;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.navbar ul li {
+    list-style: none;
+    padding: 4px;
+    position: relative;
+    transition: 0.5s;
+    display: block;
+}
+
+.navbar ul li a {
+    color: #fafbfb;
+    text-decoration: none;
+    padding: 5px 10px;
+    font-size: 20px;
+    display: block;
+}
+
+.navbar ul li a:hover {
+    background: #B4A3B8;
+    border-radius: 6px;
+}
+
+/* Parent list item hover */
+.navbar ul li:hover {
+    background: #B4A3B8;
+    border-radius: 6px;
+}
+
+.navbar ul li ul {
+    display: none;
+    position: absolute;
+    margin-top: 5px;
+    background: #B4A3B8;
+    border-radius: 6px;
+    width: 100%;
+    padding: 10px 2px;
+    box-shadow: 0px 20px 100px 0px rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+
+.navbar ul li:hover > ul {
+    display: block;
+}
+
+/* Adjust padding for the dropdown links */
+.navbar ul li ul li {
+    padding: 0;
+}
+
+.navbar ul li ul li a {
+    padding: 10px;
+    display: block;
+    color: #fafbfb;
+}
