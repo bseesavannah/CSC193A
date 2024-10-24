@@ -22,11 +22,19 @@
     // Event handler for 'Encrypt-it!' button
     const encryptButton = document.getElementById("encrypt-it");
     encryptButton.addEventListener("click", handleClick);
+
+    // Event handler for 'Reset' button
+    const resetButton = document.getElementById("reset");
+    resetButton.addEventListener("click", handleReset);
   }
 
   function handleClick() {
     console.log("Button clicked!"); // When a button is clicked, log it
-    
+  }
+
+  function handleReset() {
+    const inputTextArea = document.getElementById("input-text");
+    inputTextArea.value = ""; // Clear contents of the box
   }
 
   // Add any other functions in this area (you should not implement your
