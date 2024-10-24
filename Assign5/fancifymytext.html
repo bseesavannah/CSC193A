@@ -4,7 +4,6 @@
 		<title>Fancify Shamcify</title>
 		<!-- link to your script file here -->
 		 <script src="fancifymytext.js"></script>
-		
 	</head>
 
 	<body>
@@ -21,15 +20,15 @@
 		<fieldset>
 			<legend>Fancify</legend>
 			<div class="regular-button">
-				<button type="button" onclick="showAlert()">Bigger!</button>
+				<button type="button" onclick="biggerClick()">Bigger!</button>
 			</div>
 			<div class="radio-buttons">
 				<label>
-					<input type="radio" name="FancyShmancy" value="button">
+					<input type="radio" id="fancyShmancy" name="button" value="fancy" onchange="changeStyle()">
 					FancyShmancy
 				</label>
 				<label>
-					<input type="radio" name="BoringBetty" value="button">
+					<input type="radio" id= "boringBetty" name="button" value="boring" onchange="changeStyle()">
 					BoringBetty
 				</label>
 			</div>
