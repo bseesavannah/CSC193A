@@ -40,7 +40,7 @@
     const textToEncrypt = inputTextArea.value;
 
     // Encrypt the text
-    const encryptedText = shiftCipher(textToEncrypt);
+    const encryptedText = shiftCipher(textToEncrypt, 1);
 
     // When the Encrypt-it button is clicked, log it
     console.log("Button clicked!"); 
@@ -55,20 +55,24 @@
   }
 
 
-  function shiftCipher(text) {
+  function shiftCipher(text, shift) {
     text = text.toLowerCase();
     let result = "";
 
     for(let i = 0; i < text.length; i++) {
-      // If the character is not a-z, don't change it
       if(text[i] < 'a' || text[i] > 'z') {
         result += text[i];
       }
-      else if(text[i] === 'z') {
-        result += 'a'; // Wrap-around to the start of the alphabet
-      }
-      else { // Character is a-y
-        result += String.fromCharCode(text.charCodeAt(i) + 1);
+      else {
+        let letterCode = text.charCodeAt(i); // will get the ASCII val of the letter
+
+        /* Calculation:
+          1. 'a' ASCII val = 97. Subtract it from the ASCII code of whatever letter is there, then shift it by adding the shift value
+          2. % 26 is due to there being 26 letters in the alphabet.
+          3. Add 97 back to turn it back into ASCII 
+        */
+        let shiftedCode = ((letterCode - 97 + shift) % 26) + 97;
+        result += String.fromCharCode(shiftedCode);
       }
     }
     return result;
