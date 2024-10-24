@@ -1,1 +1,3 @@
-alert("Hello, world!");
+const showAlert = () => {
+    alert("Hello, world!");
+}
